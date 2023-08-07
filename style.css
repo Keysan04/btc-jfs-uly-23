@@ -1,0 +1,261 @@
+/* global */
+:root {
+  --box-shadow: -5px 5 px 10px grey;
+}
+
+body {
+  margin: 0;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.btn {
+  background: rgb(170, 235, 128);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+.global {
+  background: rgb(150, 216, 150);
+}
+
+.global > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  color: black;
+}
+/* Header */
+header {
+  background: blanchedalmond;
+}
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+header ul {
+  display: flex;
+  list-style-type: none;
+}
+
+header ul li {
+  margin-left: 16px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+header ul li:hover {
+  cursor: pointer;
+  background: red;
+  transform: scale(1.5);
+}
+
+.logo {
+  background-color: white;
+  color: blue;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo div {
+  border: 3px dotted blue;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------Hero Section --------- */
+.hero {
+  background: url(./img/photo.jpg) no-repeat center;
+  min-height: 60vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  background: rgba(110, 223, 57, 0.466);
+  color: white;
+  width: 500px;
+  padding: 32px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-content hr {
+  width: 100%;
+}
+
+/* ---Latest Post */
+.main {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+article {
+  display: flex;
+  gap: 16px;
+  box-shadow: -5px 5px 10px rgb(187, 99, 99);
+  padding: 20px 16px;
+  margin-top: 24px;
+}
+.articles {
+  width: 66%;
+}
+
+/* footer */
+.footer {
+  background: black;
+  color: white;
+  padding: 50px;
+  text-align: center;
+  margin-top: 16px;
+}
+.art-img {
+  width: 250px;
+}
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: blue;
+}
+article.btn {
+  float: right;
+}
+last {
+  display: flex;
+}
+
+/* ---Side Links */
+.side-links {
+  width: 34%;
+}
+
+.country {
+  background: rgb(32, 160, 149);
+  padding: 16px;
+  border-radius: 5px;
+  margin-bottom: 33px;
+}
+.date {
+  background: rgb(236, 113, 13);
+  padding: 16px;
+  border-radius: 5px;
+}
+
+/* ====recc=== */
+.recc {
+  background: rgb(72, 121, 72);
+  margin-top: 64px;
+  padding: 46px 0;
+}
+.card-list {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  /* justify-content: center; */
+}
+.card {
+  width: 350px;
+  box-shadow: var(--box-shadow);
+  background: white;
+  padding-bottom: 32px;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+.card img {
+  border-radius: 10px 10px 0 0;
+}
+.subs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 0;
+}
+.subs input {
+  line-height: 42px;
+  border-radius: 8px;
+  border: 1px solid;
+}
+
+/* tablets */
+/* @media (max-width: 992px) {
+  .global {
+    background: rgb(32, 160, 149);
+  }
+} */
+
+/* @media (min-width: 768px) { */
+/* @media (width>768px <=992px) { */
+/* .global {
+    background: rgb(209, 19, 130);
+    display: none;
+  }
+} */
+
+/* tablets*/
+@media (max-width: 992px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .articles {
+    width: 66%;
+  }
+  .side-links {
+    width: 100%;
+    display: flex;
+    gap: 32px;
+  }
+  .country,
+  .date {
+    width: 50%;
+    height: 300px;
+    margin-top: 48px;
+    /* display: flex; */
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+/*For Phones  */
+@media (max-width: 768px) {
+  article {
+    display: flex;
+    margin-top: 24px;
+    flex-direction: column;
+  }
+  .art-img {
+    width: 100%;
+    display: flex;
+  }
+  article .btn {
+    width: 100%;
+  }
+  .side-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .country,
+  .date {
+    width: 100%;
+    margin-top: 16px;
+  }
+}
