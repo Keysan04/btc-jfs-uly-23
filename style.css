@@ -172,7 +172,7 @@ last {
   /* justify-content: center; */
 }
 .card {
-  width: 350px;
+  width: 400px;
   box-shadow: var(--box-shadow);
   background: white;
   padding-bottom: 32px;
